@@ -1,13 +1,11 @@
 package shapes
 
-class Point(private var m_x: Double, private var m_y: Double) : Movable
+class Point(var x: Double, var y: Double) : Movable
 {
-    fun getX(): Double = m_x
-    fun getY(): Double = m_y
     override fun move(dx: Double, dy: Double)
     {
-        m_x += dx
-        m_y += dy
+        x += dx
+        y += dy
     }
-    fun clone(): Point = Point(m_x, m_y)
+    fun clone(): Point = Point(x, y)
 }
