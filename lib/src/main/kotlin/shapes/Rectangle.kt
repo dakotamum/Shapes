@@ -1,6 +1,6 @@
 package shapes
 
-class Rectangle(p1: Point, p2: Point) : Shape(mutableListOf(p1, p2))
+open class Rectangle(p1: Point, p2: Point) : Shape(mutableListOf(p1, p2))
 {
     init {
         require(p1 != p2) {"Rectangle cannot have an area of zero"}
